@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">LOGO</h1>
+
+        <nav class="nav">
+          <a href="#">Hem</a>
+          <a href="#">Om</a>
+          <a href="#">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="container">
+        <h2>Välkommen till min hemsida</h2>
+        <p>Det här är en enkel landing page som jag bygger själv 😄</p>
+
+        <button class="btn">Kom igång</button>
+      </div>
+    </main>
+  </body>
+</html>
