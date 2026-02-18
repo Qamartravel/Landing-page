@@ -3,30 +3,301 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Min Landing Page</title>
+    <title>VIP Travel Club</title>
+    <meta
+      name="description"
+      content="VIP Travel Club – medlemskap med member-only deals, bagage cashback, eSIM-rabatt och AI reseplanerare."
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header class="header">
-      <div class="container">
-        <h1 class="logo">LOGO</h1>
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">VIP</div>
+          <div>
+            <div class="brand-name">VIP Travel Club</div>
+            <div class="brand-sub">Founding Members • Stockholm</div>
+          </div>
+        </div>
 
         <nav class="nav">
-          <a href="#">Hem</a>
-          <a href="#">Om</a>
-          <a href="#">Kontakt</a>
+          <a href="#perks">Förmåner</a>
+          <a href="#plans">Medlemskap</a>
+          <a class="nav-cta" href="#waitlist">Gå med</a>
         </nav>
       </div>
     </header>
 
-    <main class="hero">
-      <div class="container">
-        <h2>Välkommen till min hemsida</h2>
-        <p>Det här är en enkel landing page som jag bygger själv 😄</p>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="pill">Amazon Prime för resor — fast enklare</p>
+            <h1>Travel like a VIP, without paying VIP prices</h1>
+            <p class="lead">
+              Få <strong>member-only deals</strong>, <strong>bagage cashback</strong>,
+              <strong>eSIM-rabatt</strong>, <strong>hotellrabatt</strong> och en
+              <strong>AI reseplanerare</strong> som hjälper dig välja bästa resan.
+            </p>
 
-        <button class="btn">Kom igång</button>
-      </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#waitlist">Gå med i waitlist</a>
+              <a class="btn btn-ghost" href="#how">Hur funkar det?</a>
+            </div>
+
+            <div class="trust">
+              <div class="trust-item">
+                <div class="trust-title">✅ Inga dolda avgifter</div>
+                <div class="trust-text">Tydliga perks & villkor</div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-title">🌍 Globalt</div>
+                <div class="trust-text">Funkar oavsett destination</div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-title">⚡ Snabbt</div>
+                <div class="trust-text">Planera på 60 sek med AI</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">AI Trip Planner (demo)</div>
+                <div class="card-badge">BETA</div>
+              </div>
+
+              <div class="chat">
+                <div class="bubble user">
+                  Jag vill resa billigt i april från Stockholm.
+                </div>
+                <div class="bubble bot">
+                  Top 5 idéer: Barcelona, Milano, Prag, Split, Lissabon. Vill du ha
+                  <strong>sol</strong> eller <strong>storstad</strong>?
+                </div>
+                <div class="bubble user">
+                  Sol, max 6 timmar flyg, budget 400€.
+                </div>
+                <div class="bubble bot">
+                  Jag föreslår: <strong>Lissabon</strong>, <strong>Split</strong> och
+                  <strong>Barcelona</strong>. Som medlem får du
+                  <strong>bagage cashback</strong> + <strong>eSIM-rabatt</strong>.
+                  <span class="tiny">Priser kan ändras.</span>
+                </div>
+              </div>
+
+              <a class="btn btn-primary full" href="#waitlist">Få tidig access</a>
+              <p class="fine">
+                * AI:n visar aldrig påhittade priser. Vi använder alltid uppdaterad sökning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="perks" class="section">
+        <div class="container">
+          <h2>Förmåner dag 1</h2>
+          <p class="sub">
+            Allt du behöver för att resa smartare — utan att förhandla med flygbolag.
+          </p>
+
+          <div class="grid">
+            <div class="tile">
+              <div class="icon">💎</div>
+              <h3>Member-only deals</h3>
+              <p>Exklusiva deals och drops för medlemmar.</p>
+            </div>
+            <div class="tile">
+              <div class="icon">🤖</div>
+              <h3>AI reseplanerare</h3>
+              <p>Berätta vad du vill ha — få förslag på resor på 60 sek.</p>
+            </div>
+            <div class="tile">
+              <div class="icon">📶</div>
+              <h3>eSIM-rabatt</h3>
+              <p>Billigare data utomlands. Slipp roaming-stress.</p>
+            </div>
+            <div class="tile">
+              <div class="icon">🧳</div>
+              <h3>Bagage cashback</h3>
+              <p>Få tillbaka pengar på bagageavgifter efter bokning.</p>
+            </div>
+            <div class="tile">
+              <div class="icon">🏨</div>
+              <h3>Hotellrabatt</h3>
+              <p>Partner-rabatter och cashback via Travel Wallet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section alt">
+        <div class="container">
+          <h2>Hur funkar det?</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-nr">1</div>
+              <div>
+                <h3>Gå med i waitlist</h3>
+                <p>Få tidig access och “Founding Member”-pris.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-nr">2</div>
+              <div>
+                <h3>AI planerar din resa</h3>
+                <p>Du säger budget, datum och vibe — AI ger konkreta förslag.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-nr">3</div>
+              <div>
+                <h3>Du får perks på varje resa</h3>
+                <p>Cashback + rabatter samlas i din Travel Wallet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" class="section">
+        <div class="container">
+          <h2>Medlemskap</h2>
+          <p class="sub">Priser kan ändras. Founding Members får bästa priset.</p>
+
+          <div class="plans">
+            <div class="plan">
+              <div class="plan-top">
+                <h3>Starter</h3>
+                <div class="price">$4.99<span>/mån</span></div>
+              </div>
+              <ul>
+                <li>Member-only deals</li>
+                <li>Prisbevakning</li>
+                <li>eSIM-rabatt</li>
+                <li>Hotellrabatt via partners</li>
+                <li>Travel Wallet (cashback)</li>
+              </ul>
+              <a class="btn btn-ghost full" href="#waitlist">Vill ha Starter</a>
+            </div>
+
+            <div class="plan featured">
+              <div class="ribbon">Mest värde</div>
+              <div class="plan-top">
+                <h3>Plus</h3>
+                <div class="price">$9.99<span>/mån</span></div>
+              </div>
+              <ul>
+                <li>Allt i Starter</li>
+                <li>Högre cashback</li>
+                <li>Bagage cashback (boost)</li>
+                <li>Lounge-rabatt (partnerlänk)</li>
+              </ul>
+              <a class="btn btn-primary full" href="#waitlist">Vill ha Plus</a>
+            </div>
+
+            <div class="plan">
+              <div class="plan-top">
+                <h3>Elite</h3>
+                <div class="price">$19.99<span>/mån</span></div>
+              </div>
+              <ul>
+                <li>Allt i Plus</li>
+                <li>Prioriterad support</li>
+                <li>Member Drops (flash deals)</li>
+                <li>Extra bagage cashback</li>
+              </ul>
+              <a class="btn btn-ghost full" href="#waitlist">Vill ha Elite</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist" class="section alt">
+        <div class="container waitlist">
+          <div class="waitlist-copy">
+            <h2>Gå med i waitlist</h2>
+            <p class="sub">
+              Få tidig access + Founding Member-erbjudande. Vi mailar när vi öppnar.
+            </p>
+
+            <!--
+              OBS: Detta använder Formspree (gratis) så du slipper backend.
+              STEG 3 (nästa): Jag visar hur du skapar din Formspree-länk och byter action="".
+            -->
+            <form class="form" action="#" method="POST">
+              <label>
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="din@email.com"
+                  required
+                />
+              </label>
+
+              <label>
+                <span>Varifrån reser du oftast?</span>
+                <input
+                  type="text"
+                  name="from_city"
+                  placeholder="Stockholm"
+                  value="Stockholm"
+                />
+              </label>
+
+              <button class="btn btn-primary" type="submit">
+                Jag vill ha tidig access
+              </button>
+
+              <p class="fine">
+                Genom att signa upp godkänner du att vi kontaktar dig om VIP Travel Club.
+              </p>
+            </form>
+          </div>
+
+          <div class="waitlist-box">
+            <div class="box">
+              <h3>Founding Members</h3>
+              <p>
+                Begränsat antal. Du får bästa priset när vi lanserar.
+              </p>
+              <div class="bullets">
+                <div>✅ Tidig access</div>
+                <div>✅ Bästa priset</div>
+                <div>✅ Påverka produkten</div>
+              </div>
+              <p class="tiny">
+                Tips: Lägg till din email nu — så bygger vi resten tillsammans.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>
+            <div class="brand-name">VIP Travel Club</div>
+            <div class="fine">© <span id="year"></span> • Stockholm</div>
+          </div>
+
+          <div class="footer-links">
+            <a href="#perks">Förmåner</a>
+            <a href="#plans">Medlemskap</a>
+            <a href="#waitlist">Waitlist</a>
+          </div>
+        </div>
+      </footer>
     </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
