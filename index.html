@@ -226,11 +226,12 @@
               Få tidig access + Founding Member-erbjudande. Vi mailar när vi öppnar.
             </p>
 
-            <!--
+            
               OBS: Detta använder Formspree (gratis) så du slipper backend.
               STEG 3 (nästa): Jag visar hur du skapar din Formspree-länk och byter action="".
-            --><form class="form" name="waitlist" method="POST" data-netlify="true" action="/thanks.html">
+         <form class="form" name="waitlist" method="POST" data-netlify="true" action="/thanks.html">
   <input type="hidden" name="form-name" value="waitlist" />
+  <input type="hidden" name="redirect" value="/thanks.html" />
 
               <label>
                 <span>Email</span>
@@ -302,4 +303,5 @@
     </script>
   </body>
 </html>
+
 
