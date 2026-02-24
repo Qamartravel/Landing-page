@@ -227,10 +227,21 @@
             </p>
 
             
-            
-         <form class="form" name="waitlist" method="POST" data-netlify="true" action="/thanks/index.html">
+       <form class="form"
+      name="waitlist"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thanks/">
+
   <input type="hidden" name="form-name" value="waitlist" />
- <input type="hidden" name="redirect" value="/thanks/index.html" />
+
+  <p style="display:none;">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <input type="hidden" name="redirect" value="/thanks/" />
+
 
               <label>
                 <span>Email</span>
@@ -302,6 +313,7 @@
     </script>
   </body>
 </html>
+
 
 
 
