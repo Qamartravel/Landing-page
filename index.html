@@ -1,372 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VIP Travel Club</title>
-    <meta
-      name="description"
-      content="VIP Travel Club – membership with member-only deals, luggage cashback, eSIM discounts and an AI trip planner."
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <form name="waitlist" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="email" />
-    </form>
+<title>VIP Travel Club</title>
 
-    <header class="header">
-      <div class="container header-inner">
-        <div class="brand">
-          <div class="logo">VIP</div>
-          <div>
-            <div class="brand-name">VIP Travel Club</div>
-            <div class="brand-sub">Founding Members • Global Launch</div>
-          </div>
-        </div>
+<meta name="description"
+content="Avoid hidden travel costs like luggage fees, roaming and resort fees. VIP Travel Club helps you travel smarter with cashback, deals and AI planning." />
 
-        <nav class="nav">
-          <a href="#perks">Perks</a>
-          <a href="#plans">Membership</a>
-          <a class="nav-cta" href="#waitlist">Join</a>
-        </nav>
-      </div>
-    </header>
+<link rel="stylesheet" href="style.css" />
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-           <p class="pill">
-Avoid hidden travel costs like luggage fees, roaming, city taxes and resort fees
+<style>
+:root {
+  --lavender: #7c6cff;
+  --lavender-soft: #f4f3ff;
+  --gold: #d4af37;
+  --dark: #111;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--dark);
+  background: white;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--lavender), var(--gold));
+  color: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-ghost {
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.pill {
+  background: var(--lavender-soft);
+  padding: 8px 14px;
+  display: inline-block;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.hero {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.tile {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.plan {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.plan.featured {
+  border: 2px solid var(--gold);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+<div class="container">
+
+<p class="pill">
+Avoid hidden travel costs like luggage fees, roaming and resort fees
 </p>
 
-         <h1>Cheaper travel with member-only deals, luggage cashback and AI trip planning</h1>
+<h1>Stop overpaying for travel</h1>
 
-            <p class="lead">
-              Get <strong>member-only deals</strong>,
-              <strong>luggage cashback</strong>,
-              <strong>eSIM discounts</strong>,
-              <strong>hotel discounts</strong> and an
-              <strong>AI trip planner</strong> that helps you choose the best trip.
-            </p>
+<p class="lead">
+Most trips seem cheap — until baggage, taxes and extra fees hit.
+VIP Travel Club helps you avoid those costs and save on every trip.
+</p>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
-              <p class="tiny">Join early founding members testing VIP Travel Club.</p>
-              <a class="btn btn-ghost" href="#how">How it works</a>
-            </div>
+<a href="#waitlist" class="btn-primary">Join the waitlist</a>
+<a href="#perks" class="btn-ghost">See how it works</a>
 
-            <div class="trust">
-              <div class="trust-item">
-                <div class="trust-title">✅ No hidden fees</div>
-                <div class="trust-text">Clear perks & terms</div>
-              </div>
+</div>
+</div>
 
-              <div class="trust-item">
-                <div class="trust-title">🌍 Global</div>
-                <div class="trust-text">Works wherever you travel</div>
-              </div>
+<section class="section" id="perks">
+<div class="container">
 
-              <div class="trust-item">
-                <div class="trust-title">⚡ Fast</div>
-                <div class="trust-text">Plan trips in 60 seconds with AI</div>
-              </div>
-            </div>
-          </div>
+<h2>What you get</h2>
 
-          <div class="hero-card">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">AI Trip Planner (demo)</div>
-                <div class="card-badge">BETA</div>
-              </div>
+<div class="grid">
 
-              <div class="chat">
-                <div class="bubble user">
-                  I want to travel cheaply in April from Stockholm.
-                </div>
+<div class="tile">
+<h3>💎 Member-only deals</h3>
+<p>Access deals you won’t find publicly.</p>
+</div>
 
-                <div class="bubble bot">
-                  Top ideas: Barcelona, Milan, Prague, Split, Lisbon.
-                  Do you want <strong>sun</strong> or a
-                  <strong>city break</strong>?
-                </div>
+<div class="tile">
+<h3>🧳 Luggage cashback</h3>
+<p>Get money back on baggage fees.</p>
+</div>
 
-                <div class="bubble user">
-                  Sun, max 6 hour flight, budget €400.
-                </div>
+<div class="tile">
+<h3>📶 eSIM discounts</h3>
+<p>Avoid expensive roaming charges abroad.</p>
+</div>
 
-                <div class="bubble bot">
-                  I suggest <strong>Lisbon</strong>, <strong>Split</strong>
-                  and <strong>Barcelona</strong>. As a member you get
-                  <strong>luggage cashback</strong> +
-                  <strong>eSIM discounts</strong>.
-                  <span class="tiny">Prices may change.</span>
-                </div>
-              </div>
+<div class="tile">
+<h3>🏨 Hotel savings</h3>
+<p>Reduce hidden hotel fees and extra costs.</p>
+</div>
 
-              <a class="btn btn-primary full" href="#waitlist">
-                Get early access
-              </a>
+<div class="tile">
+<h3>🤖 AI trip planner</h3>
+<p>Find the best trips in seconds based on your budget.</p>
+</div>
 
-              <p class="fine">
-                * The AI never shows made-up prices. We always use updated search data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="tile">
+<h3>💸 Hidden cost protection</h3>
+<p>Know real prices before booking — no surprises.</p>
+</div>
 
-      <section id="perks" class="section">
-        <div class="container">
-          <h2>Day 1 perks</h2>
+</div>
+</div>
+</section>
 
-          <p class="sub">
-            Everything you need to travel smarter — without airline loyalty programs.
-          </p>
+<section class="section">
+<div class="container">
 
-          <div class="grid">
-            <div class="tile">
-              <div class="icon">💎</div>
-              <h3>Member-only deals</h3>
-              <p>Exclusive deals and drops for members.</p>
-            </div>
+<h2>How it works</h2>
 
-            <div class="tile">
-              <div class="icon">🤖</div>
-              <h3>AI trip planner</h3>
-              <p>Tell us what you want — get trip ideas in seconds.</p>
-            </div>
+<div class="grid">
 
-            <div class="tile">
-              <div class="icon">📶</div>
-              <h3>eSIM discounts</h3>
-              <p>Cheaper mobile data abroad. No roaming stress.</p>
-            </div>
+<div class="tile">
+<h3>1. Join</h3>
+<p>Get early access as a founding member.</p>
+</div>
 
-            <div class="tile">
-              <div class="icon">🧳</div>
-              <h3>Luggage cashback</h3>
-              <p>Get money back on baggage fees.</p>
-            </div>
+<div class="tile">
+<h3>2. Plan</h3>
+<p>Use AI to find trips based on your budget.</p>
+</div>
 
-            <div class="tile">
-              <div class="icon">🏨</div>
-              <h3>Hotel discounts</h3>
-              <p>Partner discounts and cashback via Travel Wallet.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="tile">
+<h3>3. Save</h3>
+<p>Get cashback and avoid hidden costs.</p>
+</div>
 
-      <section id="how" class="section alt">
-        <div class="container">
-          <h2>How it works</h2>
+</div>
+</div>
+</section>
 
-          <div class="steps">
-            <div class="step">
-              <div class="step-nr">1</div>
-              <div>
-                <h3>Join the waitlist</h3>
-                <p>Get early access and founding member pricing.</p>
-              </div>
-            </div>
+<section class="section">
+<div class="container">
 
-            <div class="step">
-              <div class="step-nr">2</div>
-              <div>
-                <h3>AI plans your trip</h3>
-                <p>You share your budget and dates — AI suggests trips.</p>
-              </div>
-            </div>
+<h2>Membership</h2>
 
-            <div class="step">
-              <div class="step-nr">3</div>
-              <div>
-                <h3>You get perks on every trip</h3>
-                <p>Cashback and discounts are saved in your Travel Wallet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="grid">
 
-      <section id="plans" class="section">
-        <div class="container">
-          <h2>Membership</h2>
+<div class="plan">
+<h3>Starter</h3>
+<p>$4.99 / month</p>
+<p>Deals, eSIM discounts, basic cashback</p>
+</div>
 
-          <p class="sub">
-            Pricing may change. Founding Members get the best deal.
-          </p>
+<div class="plan featured">
+<h3>Plus</h3>
+<p>$9.99 / month</p>
+<p>Higher cashback + luggage coverage</p>
+</div>
 
-          <div class="plans">
-            <div class="plan">
-              <div class="plan-top">
-                <h3>Starter</h3>
-                <div class="price">$4.99<span>/month</span></div>
-              </div>
+<div class="plan">
+<h3>Elite</h3>
+<p>$19.99 / month</p>
+<p>Priority perks + exclusive deals</p>
+</div>
 
-              <ul>
-                <li>Member-only deals</li>
-                <li>Price alerts</li>
-                <li>eSIM discounts</li>
-                <li>Hotel partner discounts</li>
-                <li>Travel Wallet cashback</li>
-              </ul>
+</div>
+</div>
+</section>
 
-              <a class="btn btn-ghost full" href="#waitlist">
-                Get Starter
-              </a>
-            </div>
+<section class="section" id="waitlist">
+<div class="container">
 
-            <div class="plan featured">
-              <div class="ribbon">Best value</div>
+<h2>Join the waitlist</h2>
 
-              <div class="plan-top">
-                <h3>Plus</h3>
-                <div class="price">$9.99<span>/month</span></div>
-              </div>
+<p>Get early access and best pricing.</p>
 
-              <ul>
-                <li>Everything in Starter</li>
-                <li>Higher cashback</li>
-                <li>Luggage cashback boost</li>
-                <li>Lounge discounts</li>
-              </ul>
+<form name="waitlist" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="waitlist">
 
-              <a class="btn btn-primary full" href="#waitlist">
-                Get Plus
-              </a>
-            </div>
+<input type="email" name="email" placeholder="your@email.com" required>
 
-            <div class="plan">
-              <div class="plan-top">
-                <h3>Elite</h3>
-                <div class="price">$19.99<span>/month</span></div>
-              </div>
+<input type="text" name="from_city" placeholder="Where do you travel from?">
 
-              <ul>
-                <li>Everything in Plus</li>
-                <li>Priority support</li>
-                <li>Member flash deals</li>
-                <li>Extra luggage cashback</li>
-              </ul>
+<button class="btn-primary">Get early access</button>
 
-              <a class="btn btn-ghost full" href="#waitlist">
-                Get Elite
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+</form>
 
-      <section id="waitlist" class="section alt">
-        <div class="container waitlist">
-          <div class="waitlist-copy">
-            <h2>Join the waitlist</h2>
+</div>
+</section>
 
-            <p class="sub">
-              Get early access + founding member benefits.
-              We'll email you when VIP Travel Club launches.
-            </p>
-
-            <form
-              class="form"
-              name="waitlist"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/thanks/"
-            >
-              <input type="hidden" name="form-name" value="waitlist" />
-
-              <p style="display:none;">
-                <label>Don’t fill this out:
-                  <input name="bot-field" />
-                </label>
-              </p>
-
-              <input type="hidden" name="redirect" value="/thanks/" />
-
-              <label>
-                <span>Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </label>
-
-              <label>
-                <span>Where do you usually travel from?</span>
-                <input
-                  type="text"
-                  name="from_city"
-                  placeholder="Stockholm"
-                  value="Stockholm"
-                />
-              </label>
-
-              <button class="btn btn-primary" type="submit">
-                Get early access
-              </button>
-
-              <p class="fine">
-                By signing up you agree that we may contact you about VIP Travel Club.
-              </p>
-            </form>
-          </div>
-
-          <div class="waitlist-box">
-            <div class="box">
-              <h3>Founding Members</h3>
-
-              <p>
-                Limited spots. You’ll get the best pricing when we launch.
-              </p>
-
-              <div class="bullets">
-                <div>✅ Early access</div>
-                <div>✅ Best pricing</div>
-                <div>✅ Help shape the product</div>
-              </div>
-
-              <p class="tiny">
-                Join now and help us build the future of travel membership.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <div class="container footer-inner">
-          <div>
-            <div class="brand-name">VIP Travel Club</div>
-            <div class="fine">© <span id="year"></span> • Stockholm</div>
-          </div>
-
-          <div class="footer-links">
-            <a href="#perks">Perks</a>
-            <a href="#plans">Membership</a>
-            <a href="#waitlist">Waitlist</a>
-          </div>
-        </div>
-      </footer>
-    </main>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
-
-
-
-
-
-
-
