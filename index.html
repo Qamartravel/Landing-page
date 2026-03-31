@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VIP Travel Club</title>
 
-<meta name="description"
-content="Avoid hidden travel costs like luggage fees, roaming and resort fees. VIP Travel Club helps you travel smarter with cashback, deals and AI planning." />
-
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
 
 <style>
 :root {
-  --lavender: #7c6cff;
-  --lavender-soft: #f4f3ff;
+  --lavender: #8b7cff;
+  --lavender-dark: #5f4bff;
   --gold: #d4af37;
-  --dark: #111;
+  --dark: #0f0f1a;
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  color: var(--dark);
-  background: white;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background: var(--dark);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(15,15,26,0.8), rgba(15,15,26,0.9)),
+  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.pill {
+  background: rgba(139,124,255,0.2);
+  border: 1px solid var(--lavender);
+  padding: 10px 16px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
+  color: #ddd;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--lavender), var(--gold));
   color: white;
-  padding: 14px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
 }
 
 .btn-ghost {
-  border: 1px solid #ddd;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+  border: 1px solid #aaa;
+  color: white;
 }
 
-.pill {
-  background: var(--lavender-soft);
-  padding: 8px 14px;
-  display: inline-block;
-  border-radius: 999px;
-  margin-bottom: 16px;
-}
-
-.hero {
-  padding: 60px 20px;
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .container {
@@ -59,48 +85,46 @@ body {
   margin: auto;
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 16px;
-}
-
-.lead {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.section {
-  padding: 60px 20px;
-}
-
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .tile {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
+/* PLANS */
 .plan {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 16px;
 }
 
 .plan.featured {
   border: 2px solid var(--gold);
+  transform: scale(1.05);
+}
+
+/* WAITLIST */
+.waitlist {
+  background: linear-gradient(135deg, var(--lavender-dark), #1a1a40);
 }
 
 input {
   width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 14px;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
 }
 </style>
 
@@ -108,141 +132,137 @@ input {
 
 <body>
 
-<div class="hero">
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
 
-<p class="pill">
-Avoid hidden travel costs like luggage fees, roaming and resort fees
-</p>
+    <p class="pill">
+      Avoid hidden travel costs like luggage fees, roaming and resort fees
+    </p>
 
-<h1>Stop overpaying for travel</h1>
+    <h1>Travel smarter. Pay less.</h1>
 
-<p class="lead">
-Most trips seem cheap — until baggage, taxes and extra fees hit.
-VIP Travel Club helps you avoid those costs and save on every trip.
-</p>
+    <p class="lead">
+      Stop overpaying for baggage, taxes and hidden fees.
+      VIP Travel Club helps you save on every trip with deals, cashback and AI planning.
+    </p>
 
-<a href="#waitlist" class="btn-primary">Join the waitlist</a>
-<a href="#perks" class="btn-ghost">See how it works</a>
+    <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+    <a href="#perks" class="btn btn-ghost">See how it works</a>
 
-</div>
-</div>
+  </div>
+</section>
 
+<!-- PERKS -->
 <section class="section" id="perks">
-<div class="container">
+  <div class="container">
+    <h2>Everything you need to travel smarter</h2>
 
-<h2>What you get</h2>
+    <div class="grid">
 
-<div class="grid">
+      <div class="tile">
+        💎 <h3>Member-only deals</h3>
+        <p>Exclusive prices not available publicly.</p>
+      </div>
 
-<div class="tile">
-<h3>💎 Member-only deals</h3>
-<p>Access deals you won’t find publicly.</p>
-</div>
+      <div class="tile">
+        🧳 <h3>Luggage cashback</h3>
+        <p>Get money back on baggage fees.</p>
+      </div>
 
-<div class="tile">
-<h3>🧳 Luggage cashback</h3>
-<p>Get money back on baggage fees.</p>
-</div>
+      <div class="tile">
+        📶 <h3>eSIM discounts</h3>
+        <p>No more expensive roaming abroad.</p>
+      </div>
 
-<div class="tile">
-<h3>📶 eSIM discounts</h3>
-<p>Avoid expensive roaming charges abroad.</p>
-</div>
+      <div class="tile">
+        🏨 <h3>Hotel savings</h3>
+        <p>Avoid hidden resort and city fees.</p>
+      </div>
 
-<div class="tile">
-<h3>🏨 Hotel savings</h3>
-<p>Reduce hidden hotel fees and extra costs.</p>
-</div>
+      <div class="tile">
+        🤖 <h3>AI trip planner</h3>
+        <p>Find trips in seconds based on your budget.</p>
+      </div>
 
-<div class="tile">
-<h3>🤖 AI trip planner</h3>
-<p>Find the best trips in seconds based on your budget.</p>
-</div>
+      <div class="tile">
+        💸 <h3>No hidden costs</h3>
+        <p>Know the real price before booking.</p>
+      </div>
 
-<div class="tile">
-<h3>💸 Hidden cost protection</h3>
-<p>Know real prices before booking — no surprises.</p>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
+<!-- HOW -->
 <section class="section">
-<div class="container">
+  <div class="container">
+    <h2>How it works</h2>
 
-<h2>How it works</h2>
+    <div class="grid">
 
-<div class="grid">
+      <div class="tile">
+        <h3>1. Join</h3>
+        <p>Get early access</p>
+      </div>
 
-<div class="tile">
-<h3>1. Join</h3>
-<p>Get early access as a founding member.</p>
-</div>
+      <div class="tile">
+        <h3>2. Plan</h3>
+        <p>AI finds your best trips</p>
+      </div>
 
-<div class="tile">
-<h3>2. Plan</h3>
-<p>Use AI to find trips based on your budget.</p>
-</div>
+      <div class="tile">
+        <h3>3. Save</h3>
+        <p>Cashback + discounts</p>
+      </div>
 
-<div class="tile">
-<h3>3. Save</h3>
-<p>Get cashback and avoid hidden costs.</p>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
+<!-- PRICING -->
 <section class="section">
-<div class="container">
+  <div class="container">
+    <h2>Membership</h2>
 
-<h2>Membership</h2>
+    <div class="grid">
 
-<div class="grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p>$4.99/month</p>
+      </div>
 
-<div class="plan">
-<h3>Starter</h3>
-<p>$4.99 / month</p>
-<p>Deals, eSIM discounts, basic cashback</p>
-</div>
+      <div class="plan featured">
+        <h3>Plus</h3>
+        <p>$9.99/month</p>
+      </div>
 
-<div class="plan featured">
-<h3>Plus</h3>
-<p>$9.99 / month</p>
-<p>Higher cashback + luggage coverage</p>
-</div>
+      <div class="plan">
+        <h3>Elite</h3>
+        <p>$19.99/month</p>
+      </div>
 
-<div class="plan">
-<h3>Elite</h3>
-<p>$19.99 / month</p>
-<p>Priority perks + exclusive deals</p>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="waitlist">
-<div class="container">
+<!-- WAITLIST -->
+<section class="section waitlist" id="waitlist">
+  <div class="container">
 
-<h2>Join the waitlist</h2>
+    <h2>Join the waitlist</h2>
+    <p>Be first to access VIP pricing</p>
 
-<p>Get early access and best pricing.</p>
+    <form name="waitlist" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="waitlist">
 
-<form name="waitlist" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="waitlist">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <input type="text" name="from_city" placeholder="Where do you travel from?">
 
-<input type="email" name="email" placeholder="your@email.com" required>
+      <button class="btn btn-primary">Get early access</button>
+    </form>
 
-<input type="text" name="from_city" placeholder="Where do you travel from?">
-
-<button class="btn-primary">Get early access</button>
-
-</form>
-
-</div>
+  </div>
 </section>
 
 </body>
