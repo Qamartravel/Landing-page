@@ -25,7 +25,7 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(15,15,26,0.8), rgba(15,15,26,0.9)),
+  background: linear-gradient(rgba(10,10,20,0.75), rgba(10,10,20,0.95)),
   url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
   background-size: cover;
   background-position: center;
@@ -36,6 +36,9 @@ body {
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .pill {
@@ -65,8 +68,9 @@ h1 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--lavender), var(--gold));
-  color: white;
+  background: linear-gradient(135deg, #a18cff, #d4af37);
+  color: black;
+  box-shadow: 0 10px 25px rgba(212,175,55,0.3);
 }
 
 .btn-ghost {
@@ -94,7 +98,18 @@ h1 {
 }
 
 .tile {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.06);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
   padding: 25px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
@@ -136,20 +151,24 @@ input {
 <section class="hero">
   <div class="container">
 
-    <p class="pill">
-      Avoid hidden travel costs like luggage fees, roaming and resort fees
-    </p>
+  <p class="pill">
+Built from real traveler frustrations: baggage fees, roaming, resort fees, and hidden costs
+</p>
 
-    <h1>Travel smarter. Pay less.</h1>
-
-    <p class="lead">
-      Stop overpaying for baggage, taxes and hidden fees.
-      VIP Travel Club helps you save on every trip with deals, cashback and AI planning.
-    </p>
+<h1>Stop overpaying every time you travel</h1>
+   <p class="lead">
+Most travelers overpay without realizing it.
+We help you avoid hidden fees, save on baggage, and find better trips faster.
+</p>
 
     <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
     <a href="#perks" class="btn btn-ghost">See how it works</a>
-
+    <p style="margin-top:20px; color:#ccc; font-size:14px;">
+Based on real feedback:
+"Resort fees cost more than the hotel" •
+"Airport food is insanely overpriced" •
+"Roaming charges are ridiculous"
+</p>
   </div>
 </section>
 
@@ -223,8 +242,7 @@ input {
 <!-- PRICING -->
 <section class="section">
   <div class="container">
-    <h2>Membership</h2>
-
+<h2>Simple pricing</h2>
     <div class="grid">
 
       <div class="plan">
@@ -251,6 +269,14 @@ input {
   <div class="container">
 
     <h2>Join the waitlist</h2>
+    <div style="margin:20px 0; color:#ddd;">
+  <p>✔ Early access before launch</p>
+  <p>✔ Best pricing (Founding Member deal)</p>
+  <p>✔ Help shape the product</p>
+</div>
+    <p style="color:#ffd700; font-weight:bold;">
+Limited early access • Founding members only
+</p>
     <p>Be first to access VIP pricing</p>
 
     <form name="waitlist" method="POST" data-netlify="true">
@@ -259,7 +285,10 @@ input {
       <input type="email" name="email" placeholder="your@email.com" required>
       <input type="text" name="from_city" placeholder="Where do you travel from?">
 
-      <button class="btn btn-primary">Get early access</button>
+<button class="btn btn-primary">Get early access →</button>
+      <p style="font-size:13px; color:#bbb;">
+No spam. Only early access updates.
+</p>
     </form>
 
   </div>
